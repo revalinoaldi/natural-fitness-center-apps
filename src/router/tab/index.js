@@ -1,8 +1,8 @@
 import React from 'react'
+import { Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Login, Register } from '../../components/page';
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Icon } from '@gluestack-ui/themed';
 
 const Tab = createBottomTabNavigator();
 
@@ -14,18 +14,18 @@ const TabRoute = () => {
                           fontSize: 12,
                       },
                       headerShown: false,
-                      tabBarIcon: ({focused, tintColor, size}) => (
-                          <MaterialCommunityIcons name="home-account" size={size} color={tintColor} />
-                      )
+                      tabBarIcon: ({focused, tintColor, size}) => {
+                        return <Image source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}} />
+                      }
                   }}/>
         <Tab.Screen name="User" component={Register} options={{
                       tabBarLabelStyle: {
                           fontSize: 12,
                       },
                       headerShown: false,
-                      tabBarIcon: ({focused, tintColor, size}) => (
-                          <MaterialCommunityIcons name="account" size={size} color={tintColor} />
-                      )
+                      tabBarIcon: ({focused, tintColor, size}) => {
+                        return <Image source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}} />
+                      }
                   }} />
     </Tab.Navigator>
   )

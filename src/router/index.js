@@ -13,7 +13,7 @@ const Router = () => {
   };
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={'Tab'} screenOptions={screenOption}>
+      <Stack.Navigator initialRouteName={'Login'} screenOptions={screenOption}>
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="Tab" component={TabRoute} />
