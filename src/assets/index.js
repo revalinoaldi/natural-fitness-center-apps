@@ -1,5 +1,6 @@
 import Logo from './Logo'
-
+import NFSLogo from './NFS'
 export {
-    Logo
+    Logo,
+    NFSLogo
 }
